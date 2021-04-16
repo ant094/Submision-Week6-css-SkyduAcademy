@@ -27,6 +27,7 @@ article .promosi-2 .header #seeAllDekstop, article .promosi-2 #seeAllMobile, hea
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,7 +51,9 @@ header .motto {
 }
 
 header .icon-hamburger {
-  display: inline;
+  display: block;
+  float: right;
+  padding-top: 8px;
 }
 
 header .navigasi {
