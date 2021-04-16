@@ -43,9 +43,12 @@ $image-item:(1: '../images/mobile/image-deep-earth.jpg',
     margin: 0;
     padding: 0;
 }
-
+html{
+    overflow-x: hidden;
+}
 body {
     font-size: 15px
+    
 }
 
 header {
@@ -67,7 +70,9 @@ header {
     }
 
     .icon-hamburger {
-        display: inline;
+        display: block;
+        float: right;
+        padding-top: 8px;
     }
 
     .navigasi {

@@ -29,6 +29,10 @@ article .promosi-2 .header #seeAllDekstop, article .promosi-2 #seeAllMobile, hea
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 15px;
 }
@@ -50,7 +54,9 @@ header .motto {
 }
 
 header .icon-hamburger {
-  display: inline;
+  display: block;
+  float: right;
+  padding-top: 8px;
 }
 
 header .navigasi {
