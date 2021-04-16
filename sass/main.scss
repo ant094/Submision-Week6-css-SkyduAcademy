@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+$White : hsl(0, 0%, 100%);
+$Black : hsl(0, 0%, 0%);
+$Dark-Gray : hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+
+%seeAll {
+    padding: 18px 48px;
+    border: 2px solid black;
+    width: 100px;
+    display: inline-block;
+    margin-top: 15px;               
+                  &:hover{
+                    cursor: pointer;
+                    background-color: $Black;
+                    color: $White;
+                }
+    @extend %styleJosefin;
+}
+
+%styleAlata {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+%styleJosefin {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+$image-item:(1: '../images/mobile/image-deep-earth.jpg',
+    2: '../images/mobile/image-night-arcade.jpg',
+    3: '../images/mobile/image-soccer-team.jpg',
+    4: '../images/mobile/image-grid.jpg',
+    5: '../images/mobile/image-from-above.jpg',
+    6: '../images/mobile/image-pocket-borealis.jpg',
+    7: '../images/mobile/image-curiosity.jpg',
+    8: '../images/mobile/image-fisheye.jpg',
+);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px
+}
+
+header {
+    background-image: url('../images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+
+   
+
+    .motto {
+        font-size: 3.125rem;
+        padding: 30px;
+        color: $White;
+        border: 2px solid $White;
+        margin-top: 200px;
+        margin-bottom: 300px;
+        @extend %styleJosefin;
+    }
+
+    .icon-hamburger {
+        display: inline;
+    }
+
+    .navigasi {
+        display: none;
+    }
+}
+
+main {
+    padding: 125px 30px;
+}
+
+article {
+    .promosi-1 {
+        margin-bottom: 115px;
+
+        .img-content {
+            background-image: url(../images/desktop/image-interactive.jpg);
+            height: 300px;
+            background-size: 415px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .text-content {
+            text-align: center;
+
+            h2 {
+                @extend %styleJosefin;
+                font-size: 2rem;
+                margin-top: 62px;
+                margin-bottom: 40px;
+            }
+
+            p {
+                color: $Dark-Gray;
+                @extend %styleAlata;
+            }
+        }
+    }
+
+    .promosi-2 {
+        text-align: center;
+        @extend %styleJosefin;
+
+        .header{
+        h2 {
+            @extend %styleJosefin;
+            font-size: 2rem;
+            margin-bottom: 70px;
+
+        }
+        #seeAllDekstop {
+            @extend %seeAll;
+            display: none;
+        }
+        }
+
+
+        div.image-promosi-2 {
+            height: 150px;
+            margin-bottom: 25px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: $White;
+                     &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                     position:absolute;
+  top:0;
+   left:0;
+   width:100%;
+   height:100%;
+                    h3{
+                        color: $Black;
+                    }
+            }
+         
+            h3 {
+                @extend %styleJosefin;
+
+                font-size: 32px;
+                width: 20px;
+                padding: 67px 0px 0px 30px;
+                
+            }
+
+        }
+
+        @each $index,
+        $image in $image-item {
+
+            div.image-promosi-2:nth-child(#{$index}) {
+                background-image: url(#{$image});
+           
+            }
+        }
+
+        div.image-promosi-2:nth-child(5) {
+            h3 {
+                width: 165px;
+            }
+        }
+
+        div.image-promosi-2:last-child() {
+            h3 {
+                width: 165px;
+            }
+        }
+
+        
+
+        #seeAllMobile {
+            @extend %seeAll;
+            display: inline-block;
+        }
+
+    }
+}
+
+
+
+footer {
+    background-color: $Black;
+    color: $White;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 74px;
+ .brand {
+        margin-top: 46px;
+    }
+    .footer-1 {
+        h1 {
+            @extend %styleAlata;
+            color: $White;
+            margin-top: 46px;
+        }
+
+        ul {
+            margin-top: 27px;
+            list-style: none;
+            margin-bottom: 17px;
+
+            li {
+                padding-top: 30px;
+                  a{
+                    text-align: center;
+                    color: $White;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .footer-2 {
+        ul {
+            list-style: none;
+            margin-top: 46px;
+            margin-bottom: 27px;
+
+            li {
+                display: inline;
+                margin-right: 20px;
+               
+            }
+        }
+
+        p {
+            @extend %styleAlata;
+            color: $Very-Dark-Gray;
+        }
+    }
+}
+
+@media screen and (min-width:1280px) {
+    $image-item: (1: '../images/desktop/image-deep-earth.jpg',
+            2: '../images/desktop/image-night-arcade.jpg',
+            3: '../images/desktop/image-soccer-team.jpg',
+            4: '../images/desktop/image-grid.jpg',
+            5: '../images/desktop/image-from-above.jpg',
+            6: '../images/desktop/image-pocket-borealis.jpg',
+            7: '../images/desktop/image-curiosity.jpg',
+            8: '../images/desktop/image-fisheye.jpg',
+        );
+
+    body {
+        max-width: 1430px;
+        margin: 0px auto;
+    }
+
+    header {
+        // margin: auto;
+        max-width: 1116px;
+        background-image: url('../images/desktop/image-hero.jpg');
+        padding: 64px 160px;
+
+        .icon-hamburger {
+            display: none;
+        }
+
+        .navigasi {
+            float: right;
+            display: inline;
+            list-style: none;
+            padding-top: 10px;
+
+            li {
+                display: inline-block;
+                margin-right: 30px;
+                &:hover{
+                      div{
+                    width: 20px;
+                    margin-left: 14px;
+                    border-bottom: 2px solid $White;
+                    margin-top: 5px;
+                }
+                }
+                a{
+                    padding-bottom: 10px;
+                    text-align: center;
+                    width: 20px;
+                    color: $White;
+                    text-decoration: none;
+                      
+                }
+              
+            
+            }
+        }
+
+        .motto {
+            font-size: 4.5rem;
+            padding: 40px 100px 44px 27px;
+            width: 652px;
+            margin-top: 135px;
+            margin-bottom: 145px;
+        }
+    }
+
+    main {
+        padding: 160px 160px 0px 160px;
+    }
+
+    article {
+        .promosi-1 {
+            max-width: 963px;
+
+            .img-content {
+                background-image: url(../images/desktop/image-interactive.jpg);
+                height: 500px;
+                width: 73%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: left;
+            }
+
+            .text-content {
+                text-align: left;
+                padding-top: 36px;
+                padding-left: 47px;
+                width: 445px;
+                float: right;
+                background-color: $White;
+                margin-top: -284px;
+                margin-right: -110px;
+            }
+        }
+
+        .promosi-2 {
+            margin-bottom: 184px;
+            
+            .header{
+                text-align: left;
+                h2 {
+                margin-top: 15px;
+                font-size: 48px;
+                display: inline-block;
+            }
+              #seeAllDekstop {
+                display: block;
+                float: right;
+                text-align: center;
+            }
+        }
+          #seeAllMobile {
+                display: none;
+            }
+
+            div.image-promosi-2 {
+                height: 450px;
+                width: 257px;
+                display: inline-block;
+                margin-right: 10px;
+
+                h3 {
+                    padding: 350px 0px 0px 30px;
+                }
+            }
+
+            @each $index,
+            $image in $image-item {
+
+                div.image-promosi-2:nth-child(#{$index}) {
+                    background-image: url(#{$image});
+                }
+            }
+
+            div.image-promosi-2:nth-child(5) {
+                h3 {
+                    width: 165px;
+                }
+            }
+
+            div.image-promosi-2:last-child() {
+                h3 {
+                    width: 165px;
+                }
+            }
+
+          
+
+          
+
+        }
+
+    }
+
+
+
+
+
+    footer {
+        text-align: left;
+        display: flex;
+        padding: 0px 160px;
+
+        .footer-1 {
+            flex-grow: 1;
+
+            ul {
+                li {
+                    margin-right: 27px;
+                    display: inline;
+                }
+            }
+        }
+
+        .footer-2 {
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
+
+}
