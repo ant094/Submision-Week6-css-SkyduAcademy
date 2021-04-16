@@ -106,18 +106,12 @@ article .promosi-2 div.image-promosi-2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   color: white;
 }
 
 article .promosi-2 div.image-promosi-2:hover {
   cursor: pointer;
   opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 article .promosi-2 div.image-promosi-2:hover h3 {
