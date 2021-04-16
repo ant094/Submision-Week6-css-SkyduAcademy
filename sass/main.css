@@ -166,6 +166,10 @@ article .promosi-2 div.image-promosi-2:nth-child(5) h3 {
   width: 165px;
 }
 
+article .promosi-2 div.image-promosi-2:nth-child(3) h3 {
+  width: 165px;
+}
+
 article .promosi-2 div.image-promosi-2:last-child h3 {
   width: 165px;
 }
