@@ -9,12 +9,14 @@ $Very-Dark-Gray: hsl(0, 0%, 41%);
     border: 2px solid black;
     width: 100px;
     display: inline-block;
-    margin-top: 15px;               
-                  &:hover{
-                    cursor: pointer;
-                    background-color: $Black;
-                    color: $White;
-                }
+    margin-top: 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $Black;
+        color: $White;
+    }
+
     @extend %styleJosefin;
 }
 
@@ -43,9 +45,9 @@ $image-item:(1: '../images/mobile/image-deep-earth.jpg',
     margin: 0;
     padding: 0;
 }
+
 body {
     font-size: 15px
-    
 }
 
 header {
@@ -54,7 +56,7 @@ header {
     background-repeat: no-repeat;
     padding: 30px;
 
-   
+
 
     .motto {
         font-size: 3.125rem;
@@ -114,17 +116,18 @@ article {
         text-align: center;
         @extend %styleJosefin;
 
-        .header{
-        h2 {
-            @extend %styleJosefin;
-            font-size: 2rem;
-            margin-bottom: 70px;
+        .header {
+            h2 {
+                @extend %styleJosefin;
+                font-size: 2rem;
+                margin-bottom: 70px;
 
-        }
-        #seeAllDekstop {
-            @extend %seeAll;
-            display: none;
-        }
+            }
+
+            #seeAllDekstop {
+                @extend %seeAll;
+                display: none;
+            }
         }
 
 
@@ -135,21 +138,23 @@ article {
             background-size: cover;
             background-position: center;
             color: $White;
-                     &:hover{
-                    cursor: pointer;
-                    opacity: 0.5;
-                    h3{
-                        color: $Black;
-                    }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.5;
+
+                h3 {
+                    color: $Black;
+                }
             }
-         
+
             h3 {
                 @extend %styleJosefin;
 
                 font-size: 32px;
                 width: 20px;
                 padding: 67px 0px 0px 30px;
-                
+
             }
 
         }
@@ -159,7 +164,7 @@ article {
 
             div.image-promosi-2:nth-child(#{$index}) {
                 background-image: url(#{$image});
-           
+
             }
         }
 
@@ -168,6 +173,7 @@ article {
                 width: 165px;
             }
         }
+
         div.image-promosi-2:nth-child(3) {
             h3 {
                 width: 165px;
@@ -180,7 +186,7 @@ article {
             }
         }
 
-        
+
 
         #seeAllMobile {
             @extend %seeAll;
@@ -198,9 +204,11 @@ footer {
     text-align: center;
     padding-top: 24px;
     padding-bottom: 74px;
- .brand {
+
+    .brand {
         margin-top: 46px;
     }
+
     .footer-1 {
         h1 {
             @extend %styleAlata;
@@ -215,7 +223,8 @@ footer {
 
             li {
                 padding-top: 30px;
-                  a{
+
+                a {
                     text-align: center;
                     color: $White;
                     text-decoration: none;
@@ -233,7 +242,7 @@ footer {
             li {
                 display: inline;
                 margin-right: 20px;
-               
+
             }
         }
 
@@ -279,24 +288,26 @@ footer {
             li {
                 display: inline-block;
                 margin-right: 30px;
-                &:hover{
-                      div{
-                    width: 20px;
-                    margin-left: 14px;
-                    border-bottom: 2px solid $White;
-                    margin-top: 5px;
+
+                &:hover {
+                    div {
+                        width: 20px;
+                        margin-left: 14px;
+                        border-bottom: 2px solid $White;
+                        margin-top: 5px;
+                    }
                 }
-                }
-                a{
+
+                a {
                     padding-bottom: 10px;
                     text-align: center;
                     width: 20px;
                     color: $White;
                     text-decoration: none;
-                      
+
                 }
-              
-            
+
+
             }
         }
 
@@ -340,21 +351,24 @@ footer {
 
         .promosi-2 {
             margin-bottom: 184px;
-            
-            .header{
+
+            .header {
                 text-align: left;
+
                 h2 {
-                margin-top: 15px;
-                font-size: 48px;
-                display: inline-block;
+                    margin-top: 15px;
+                    font-size: 48px;
+                    display: inline-block;
+                }
+
+                #seeAllDekstop {
+                    display: block;
+                    float: right;
+                    text-align: center;
+                }
             }
-              #seeAllDekstop {
-                display: block;
-                float: right;
-                text-align: center;
-            }
-        }
-          #seeAllMobile {
+
+            #seeAllMobile {
                 display: none;
             }
 
@@ -408,7 +422,16 @@ footer {
             ul {
                 li {
                     margin-right: 27px;
-                    display: inline;
+                    display: inline-block;
+
+                    &:hover {
+                        div {
+                            width: 20px;
+                            margin-left: 14px;
+                            border-bottom: 2px solid $White;
+                            margin-top: 5px;
+                        }
+                    }
                 }
             }
         }
